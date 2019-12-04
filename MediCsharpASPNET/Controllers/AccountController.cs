@@ -22,6 +22,13 @@ namespace MediCsharpASPNET.Controllers
         {
         }
 
+        public ActionResult Index()
+        {
+
+            ViewBag.Message = "Gracias por Contactarte con Nosotros!!";
+            return View();
+        }
+
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;

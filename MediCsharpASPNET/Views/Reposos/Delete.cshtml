@@ -1,0 +1,56 @@
+﻿@model MediCsharpASPNET.Models.Reposo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Reposo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDesde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDesde)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaHasta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaHasta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Doctor.NombreDoctor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doctor.NombreDoctor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.NombrePaciente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.NombrePaciente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
